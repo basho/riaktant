@@ -1,0 +1,11 @@
+* node-syslog-riak
+** Overview
+   This is a sample application that stores syslog messages in [[https://github.com/basho/riak_search][Riak
+   Search]], using [[https://github.com/frank06/riak-js][riak-js]].
+
+** Installation
+   TODO: fill this out more
+   1) Install npm packages
+   2) Configure connection to Riak Search
+   3) Install search schema
+   4) Startup the app
