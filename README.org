@@ -4,8 +4,8 @@
    Search]], using [[https://github.com/frank06/riak-js][riak-js]].
 
 ** Installation
-   TODO: fill this out more
-   1) Install npm packages
-   2) Configure connection to Riak Search
-   3) Install search schema
+   1) =npm bundle= (installs dependencies)
+   2) Copy =config/riak.js.example= to =config/riak.js= and
+      tweak to fit your setup.
+   3) =search-cmd set_schema syslog config/syslog_schema.erl=
    4) Startup the app
