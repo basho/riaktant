@@ -7,5 +7,6 @@
    1) =npm bundle= (installs dependencies)
    2) Copy =config/riak.js.example= to =config/riak.js= and
       tweak to fit your setup.
-   3) =search-cmd set_schema syslog config/syslog_schema.erl=
-   4) Startup the app
+   3) =search-cmd set-schema syslog config/syslog_schema.erl=
+   4) =search-cmd install syslog=
+   5) Startup the app
