@@ -1,0 +1,10 @@
+{
+"name":"node-syslog-riak",
+"description":"A sample node.js application that stores syslog messages in Riak Search.",
+"version":"0.1.0",
+"keywords":["riak", "search", "syslog"],
+"dependencies":{
+  "riak-js":">=0.3.6",
+  "glossy":">=0.0.2"
+}
+}
