@@ -5,6 +5,8 @@
 "keywords":["riak", "search", "syslog"],
 "dependencies":{
   "riak-js":">=0.3.6",
-  "glossy":">=0.0.2"
+  "glossy":">=0.0.2",
+  "connect":"= 0.5.10",
+  "express":"= 1.0.7"
 }
 }
