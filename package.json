@@ -6,7 +6,6 @@
 "dependencies":{
   "riak-js":">=0.3.6",
   "glossy":">=0.0.2",
-  "connect":"= 0.5.10",
-  "express":"= 1.0.7"
+  "express":"2.0.0beta3"
 }
 }
