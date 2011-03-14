@@ -1,0 +1,86 @@
+div#search-results {
+  height: 100%;
+  float: left;
+  overflow: auto;
+  width: 80%;
+}
+
+div#search-bar {
+  float: left;
+  height: 100%;
+  width: 230px;
+  background-color: #b3bccc;
+  border-right: 2px solid #737c8c;
+}
+
+body {
+  margin: 0px 0px;
+  font-size: 12px;
+  background-color: #dbe3f0;
+  color: #5a6571;
+}
+
+div.form.center {
+  width: 210px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+input[type=text], input[type=password], select {
+  display: inline-block;
+  width: 180px;
+  height: 20px;
+  padding: 10px 5px;
+}
+
+input {
+  border: 1px solid grey;
+}
+
+input[type=submit] {
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid grey;
+  width: 180px;
+  color: #DBE3F0;
+  background-color: #596171;
+}
+
+label {
+  float: left;
+  width: 180px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+img {
+  margin: 10px;
+}
+
+img.logo.center {
+  margin: 20px 20px 0px 20px;
+}
+
+form {
+  margin: 0px;
+}
+
+pre {
+  margin: 5px;
+}
+
+#login {
+  margin: 300px auto;
+  width: 300px;
+  height: 200px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: #A2A9AF;
+  overflow: auto;
+}
+
+#login-form {
+  margin: 30px auto;
+  width: 180px;
+}
+
