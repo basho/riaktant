@@ -41,6 +41,7 @@ body {
   color: #5a6571;
   min-width: 500px;
   min-height: 500px;
+  font-family: Lucida Grande, Helvetica, sans-serif;
 }
 
 div.form.center {
@@ -93,14 +94,19 @@ pre {
   margin: 5px;
 }
 
-#login {
+#center-frame {
   margin: 200px auto;
   margin-bottom: 0px;
+  text-align: center;
   width: 300px;
+}
+
+#login {
+  text-align: left;
   height: 220px;
   border: 1px solid grey;
   border-radius: 15px;
-  background-color: #A2A9AF;
+  background-color: #B3BCCC;
 }
 
 #login-form {
