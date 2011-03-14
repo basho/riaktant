@@ -94,13 +94,13 @@ pre {
 }
 
 #login {
-  margin: 300px auto;
+  margin: 200px auto;
+  margin-bottom: 0px;
   width: 300px;
-  height: 200px;
+  height: 220px;
   border: 1px solid grey;
   border-radius: 15px;
   background-color: #A2A9AF;
-  overflow: auto;
 }
 
 #login-form {
