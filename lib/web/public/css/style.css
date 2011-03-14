@@ -61,6 +61,13 @@ input {
   border: 1px solid grey;
 }
 
+input[type=checkbox] {
+  width: 30px;
+  float: left;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+
 input[type=submit] {
   margin-top: 20px;
   padding: 5px;
@@ -96,6 +103,21 @@ pre {
 
 a {
   color: #5a6571;
+}
+
+fieldset {
+  border: none;
+  padding: 0px 0px;
+  margin: 0px;
+  margin-top: 20px;
+  width: 180px;
+}
+
+legend {
+  margin-top: 5px;
+  padding: 0px;
+  border-bottom: 1px solid grey;
+  width: 100%;
 }
 
 #center-frame {
