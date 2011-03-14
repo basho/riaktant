@@ -94,6 +94,10 @@ pre {
   margin: 5px;
 }
 
+a {
+  color: #5a6571;
+}
+
 #center-frame {
   margin: 200px auto;
   margin-bottom: 0px;
@@ -114,3 +118,9 @@ pre {
   width: 180px;
 }
 
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
