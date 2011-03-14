@@ -1,16 +1,30 @@
-div#search-results {
-  height: 100%;
+#container {
+  padding-left: 230px;   /* LC width */
+}
+
+#container .column {
+  position: relative;
   float: left;
+}
+
+div#search-results {
+  width: 100%;
+  height: 100%;
   overflow: auto;
-  width: 80%;
 }
 
 div#search-bar {
-  float: left;
-  height: 100%;
+  right: 230px;
   width: 230px;
+  margin-left: -100%;
+  height: 100%;
+
   background-color: #b3bccc;
   border-right: 2px solid #737c8c;
+}
+
+pre#search-output {
+  margin: 10px;
 }
 
 body {
