@@ -1,12 +1,18 @@
-* node-syslog-riak
+* riaktant
 ** Overview
    This is a sample application that stores syslog messages in [[https://github.com/basho/riak_search][Riak
    Search]], using [[https://github.com/frank06/riak-js][riak-js]].
 
-** Installation
+   Originally created by [[mailto:mathias@basho.com][Mathias Meyer]] and [[mailto:sean@basho.com][Sean Cribbs]] for the "Riak
+   with node.js" Basho webinar, March 15, 2011.
+** Install & Run
    1) =npm bundle= (installs dependencies)
-   2) Copy =config/riak.js.example= to =config/riak.js= and
-      tweak to fit your setup.
+   2) Copy =config/riak.js.example= to =config/riak.js= and tweak to
+      fit your setup. Make sure to have Riak Search installed and
+      running already.
    3) =search-cmd set-schema syslog config/syslog_schema.erl=
    4) =search-cmd install syslog=
-   5) Startup the app
+   5) Startup the app: =node server.js=
+   6) Feed some data into the syslog server: =node lib/syslog/producer.js=
+   7) Search it from the web application: =http://localhost:8001/=
+
