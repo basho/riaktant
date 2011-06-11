@@ -2,7 +2,7 @@ express = require "express"
 connect = require "connect"
 config = require "../../config/config.js"
 riak = require("riak-js").getClient(config)
-sessionStore = require "../session_store.js"
+sessionStore = require("riak-js").getSessionStore("syslog-web-sessions", client: riak)
 mrFunctions = require "../map_reduce.js"
 
 app = express.createServer(
@@ -11,7 +11,7 @@ app = express.createServer(
   connect.cookieParser(),
   connect.session(
     secret: "aos;fop;qe13hpoaneruhwphfepaf",
-    store: new sessionStore(bucket: "syslog-web-sessions", client: riak)
+    store: sessionStore
   )
 )
 
