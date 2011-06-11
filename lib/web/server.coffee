@@ -3,7 +3,7 @@ connect = require "connect"
 config = require "../../config/config.js"
 riak = require("riak-js").getClient(config)
 sessionStore = require("riak-js").getSessionStore(bucket: "syslog-web-sessions", client: riak)
-mrFunctions = require "../map_reduce.js"
+mrFunctions = require "../map_reduce"
 
 app = express.createServer()
 
@@ -72,7 +72,7 @@ search = (request, response, next) ->
     if data
       docs = data.docs
 
-    response.send(json(results: docs))
+    response.send json(results: docs)
 
 app.get "/", restrict, (request, response) ->
   response.render "index.ejs"
@@ -86,7 +86,7 @@ app.get "/login", (request, response) ->
     response.render "login.ejs"
 
 app.post "/login", (request, response) ->
-  if authenticate(request.body.user, request.body.password)
+  if authenticate request.body.user, request.body.password
     request.session.regenerate () ->
       request.session.logged_in = true
       response.redirect "/"
