@@ -1,9 +1,9 @@
-express= require "express"
-connect= require "connect"
-config= require "../../config/config.js"
+express = require "express"
+connect = require "connect"
+config = require "../../config/config.js"
 riak = require("riak-js").getClient(config)
-sessionStore= require "../session_store.js"
-mrFunctions= require "../map_reduce.js"
+sessionStore = require "../session_store.js"
+mrFunctions = require "../map_reduce.js"
 
 app = express.createServer(
   express.static(__dirname + '/public'),
