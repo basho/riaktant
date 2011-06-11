@@ -2,20 +2,21 @@ express = require "express"
 connect = require "connect"
 config = require "../../config/config.js"
 riak = require("riak-js").getClient(config)
-sessionStore = require("riak-js").getSessionStore("syslog-web-sessions", client: riak)
+sessionStore = require("riak-js").getSessionStore(bucket: "syslog-web-sessions", client: riak)
 mrFunctions = require "../map_reduce.js"
 
-app = express.createServer(
-  express.static(__dirname + '/public'),
-  express.bodyParser(),
-  connect.cookieParser(),
-  connect.session(
+app = express.createServer()
+
+app.configure(() ->
+  app.use express.static(__dirname + '/public')
+  app.use express.bodyParser()
+  app.use connect.cookieParser()
+  app.use connect.session(
     secret: "aos;fop;qe13hpoaneruhwphfepaf",
     store: sessionStore
   )
+  app.set 'views', __dirname + '/views'
 )
-
-app.set 'views', __dirname + '/views'
 
 json = (object) ->
   JSON.stringify(object)
@@ -79,6 +80,12 @@ app.get "/", restrict, (request, response) ->
 app.post "/search", contentTypeIsJson, mapReduce, search
 
 app.get "/login", (request, response) ->
+  if request.session.logged_in
+    response.redirect "/"
+  else
+    response.render "login.ejs"
+
+app.post "/login", (request, response) ->
   if authenticate(request.body.user, request.body.password)
     request.session.regenerate () ->
       request.session.logged_in = true
