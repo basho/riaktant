@@ -75,6 +75,7 @@ input[type=submit] {
   width: 180px;
   color: #DBE3F0;
   background-color: #596171;
+  cursor: pointer;
 }
 
 label {
