@@ -28,19 +28,19 @@ reduceFunctions =
   group_by_values: (values) ->
     result = {}
     for value in values
-      for host in values[value]
-        if host in result
-          result[host] += values[value][host]
+      for host, num of value
+        if result[host]
+          result[host] += num
         else
-          result[host] = values[value][host]
+          result[host] = num
     [result]
   ,
   # Finds the top 5 values from the aggregate input
   top_five: (values) ->
     values.map (value) ->
       mappedValue = []
-      for k in value
-        mappedValue.push [k, value[k]]
+      for k, v of value
+        mappedValue.push [k, v]]
 
       (mappedValue.sort (left, right) ->
         if left[1] > right[1]

@@ -55,7 +55,7 @@ mapReduce = (request, response, next) ->
 
     if request.body.search.reduce_function
       reduceFunctions = request.body.search.reduce_function
-      (mr.reduce(mrFunctions["reduce"][reduce]) for reduce in reduceFunctions when reduce isnt null)
+      (mapreduce.reduce(mrFunctions["reduce"][reduce]) for reduce in reduceFunctions when reduce isnt null)
 
     mapreduce.run (error, data) ->
       response.send(json(mapreduce: data))
