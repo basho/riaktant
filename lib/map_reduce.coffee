@@ -40,7 +40,7 @@ reduceFunctions =
     values.map (value) ->
       mappedValue = []
       for k, v of value
-        mappedValue.push [k, v]]
+        mappedValue.push {k: v}
 
       (mappedValue.sort (left, right) ->
         if left[1] > right[1]
@@ -49,6 +49,6 @@ reduceFunctions =
           1
         else
           0
-      ).slice(0,5)
+      ).slice(0,5)[0]
 
 module.exports = map: mapFunctions, reduce: reduceFunctions
